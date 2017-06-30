@@ -62,7 +62,7 @@ blue #45a4cf*/
  }
 
  .nav a:hover {
-   background-color: #005f5f;
+   background-color: #db7371;
  }
 
  .nav a.active {
@@ -71,7 +71,7 @@ blue #45a4cf*/
    cursor: default;
  }
 
- @media screen and (min-width: 600px) {
+ @media screen and (min-width: 200px) {
    .nav li {
      width: 120px;
      border-bottom: none;
@@ -82,12 +82,15 @@ blue #45a4cf*/
 
    .nav li {
      display: inline-block;
-     margin-right: -4px;
    }
 
-   /*.nav li {
+   .home {
      float: left;
-   }*/
+   }
+
+   .admin {
+     float: right;
+   }
 
    .nav ul {
      overflow: auto;

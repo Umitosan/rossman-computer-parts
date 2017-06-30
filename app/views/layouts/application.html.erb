@@ -13,9 +13,8 @@
     <header>
       <div class="nav">
         <ul>
-          <li class="home"><a href="#">Home</a></li>
-          <li class="admin"><a href="#">Admin</a></li>
-          <!-- <li class="admin"><a class="active" href="#">Tutorials</a></li> -->
+          <li class="home"><%= link_to "Home", root_path %></li>
+          <li class="admin"><%= link_to "Admin", products_path %></li>
         </ul>
       </div>
     </header>
@@ -24,7 +23,9 @@
       <h1>Rossman Computer Parts</h1>
     </div>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
   </body>
 

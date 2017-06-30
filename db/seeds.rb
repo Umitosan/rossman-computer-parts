@@ -12,13 +12,16 @@ Review.destroy_all
 
 
 10.times do |i|
-  someProduct = Product.create!(name: Faker::Commerce.product_name,
+  someProduct = Product.create!(name: Faker::Hacker.abbreviation,
                                 cost: Faker::Commerce.price,
                                 country: Faker::Hobbit.location
   )
-  # 3.times do |j|
-  #   someReview = someProduct.reviews.create!(title: Faker::Book.title )
-  # end
+  3.times do |j|
+    someReview = someProduct.reviews.create!(author: Faker::RickAndMorty.character,
+                                             body: Faker::Hacker.say_something_smart,
+                                             rating: 0
+  )
+  end
 end
 
 p "Created #{Product.count} products"
