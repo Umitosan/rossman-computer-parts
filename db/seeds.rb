@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# Database
+#   Products have Reviews
+#   Product
+#     name, cost, country of origin
+#   Review
+#      author, content_body, rating
