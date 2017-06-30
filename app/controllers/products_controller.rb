@@ -2,6 +2,10 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+  end
+
+  def showall
+    @products = Product.all
     @url = request.path_info
   end
 

@@ -1,19 +1,19 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require bootstrap.min
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require bootstrap.min
+*= require_tree .
+*= require_self
+*/
 
 /*colors*/
 /*http://www.color-hex.com/color-palette/41345*/
@@ -23,55 +23,71 @@ salmon #db7371
 off-white #fbfbfb
 blue #45a4cf*/
 
- body {
-   margin: 0;
-   padding: 0;
-   background: #fbfbfb;
- }
+body {
+ margin: 0;
+ padding: 0;
+ background: #fbfbfb;
+ color: #45a4cf;
+}
 
- .banner {
-   text-align: center;
-   background: #d3f0f3;
-   height: 120px;
- }
+h1, h2, h3 {
+ text-align: center;
+}
 
- .banner h1 {
-   padding: 35px;
- }
+body a:hover {
+color: #db7371
+}
 
- .nav ul {
-   list-style: none;
-   background-color: #444;
-   text-align: center;
-   padding: 0;
-   margin: 0;
- }
- .nav li {
-   font-family: 'Oswald', sans-serif;
-   font-size: 1.2em;
-   line-height: 40px;
-   height: 40px;
-   border-bottom: 1px solid #888;
- }
+.banner {
+ text-align: center;
+ background: #d3f0f3;
+ height: 120px;
+}
 
- .nav a {
-   text-decoration: none;
-   color: #fff;
-   display: block;
-   transition: .3s background-color;
- }
+.banner h1 {
+ padding: 35px;
+}
 
- .nav a:hover {
-   background-color: #db7371;
- }
+#prod-name {
+ font-style: italic;
+ font-size: 24px;
+ color: #45a4cf;
+}
 
- .nav a.active {
-   background-color: #fff;
-   color: #444;
-   cursor: default;
- }
+.nav ul {
+ list-style: none;
+ background-color: #444;
+ text-align: center;
+ padding: 0;
+ margin: 0;
+}
+.nav li {
+ font-family: 'Oswald', sans-serif;
+ font-size: 1.2em;
+ line-height: 40px;
+ height: 40px;
+ border-bottom: 1px solid #888;
+}
 
- @media screen and (min-width: 200px) {
+.nav a {
+ text-decoration: none;
+ color: #d3f0f3;
+ display: block;
+ transition: .3s background-color;
+}
+
+.nav a:hover {
+ background-color: #db7371;
+ color: #d3f0f3;
+}
+
+.nav a.active {
+ background-color: #fff;
+ color: #444;
+ cursor: default;
+}
+
+@media screen and (min-width: 200px) {
    .nav li {
      width: 120px;
      border-bottom: none;
@@ -88,7 +104,7 @@ blue #45a4cf*/
      float: left;
    }
 
-   .admin {
+   .all {
      float: right;
    }
 
@@ -101,4 +117,4 @@ blue #45a4cf*/
      background-color: #444;
    }
 
- }
+}
