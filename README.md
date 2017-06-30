@@ -1,4 +1,4 @@
-### Rossmann Computer Parts
+# Rossmann Computer Parts
 
 This web app is being created for the Rossmann Group as commissioned according to agreed upon specs.  This site aims to improve upon the existing app by serving the entire computer parts catalog in a more streamlined way.
 
@@ -30,7 +30,7 @@ This web app is being created for the Rossmann Group as commissioned according t
 * `rails s` to serve the app locally
 * point your browser to `localhost:3000`
 
-## Specifications
+### Specifications
 
 | Behavior | Input | Output |
 |----------|:-----:|:------:|
@@ -45,11 +45,11 @@ This web app is being created for the Rossmann Group as commissioned according t
 | The app allows admins to add and update products | the admin clicks on buttons 'add' or 'update' | a form is displayed with a button to submit the changes to the database |
 | The app allows admins to delete products | the admin clicks on button 'delete' | the product is deleted from the database along with it's details and reviews |
 
-## Known Bugs
+### Known Bugs
 
 * N/A at this time
 
-## License
+### License
 
 *open source GPL & MIT*
 
