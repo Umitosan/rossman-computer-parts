@@ -1,9 +1,17 @@
-<h1>all products</h1>
+<h2>all products</h2>
 
-<%= link_to "Add", new_product_path(@product) %>
+<%= link_to "Add a product", new_product_path(@product) %>
+
+<br><br>
 
 <ul>
   <% @products.each do |product|  %>
-    <li> <%= link_to product.name, product_path(product) %> </li>
+    <li>
+      <%= link_to product.name, product_path(product) %> |
+      <%= link_to "Edit", edit_product_path(product) %> |
+      <%= link_to "Delete", product_path(product),
+                               :data => {:confirm => "You sure?",
+                                         :method => "delete"} %></p>
+    </li>
   <% end %>
 </ul>

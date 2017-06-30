@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @url = request.path_info
   end
 
   def show
@@ -19,6 +20,19 @@ class ProductsController < ApplicationController
       redirect_to products_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product= Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to products_path
+    else
+      render :edit
     end
   end
 

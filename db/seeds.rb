@@ -16,10 +16,10 @@ Review.destroy_all
                                 cost: Faker::Commerce.price,
                                 country: Faker::Hobbit.location
   )
-  3.times do |j|
+  5.times do |j|
     someReview = someProduct.reviews.create!(author: Faker::RickAndMorty.character,
-                                             body: Faker::Hacker.say_something_smart,
-                                             rating: 0
+                                             body: Faker::Hipster.paragraph(2),
+                                             rating: (1 + rand(5))
   )
   end
 end
