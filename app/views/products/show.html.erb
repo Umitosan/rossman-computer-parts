@@ -1,18 +1,22 @@
 <h1> <%= @product.name %> </h1>
 
 <% if @product.reviews.any? %>
+<br>
+<br>
 
-  <ul>
-    <% @product.reviews.each do |review| %>
-      <li>
-        <p><%= review.body %></p>
-        <p> -- <%= review.author %></p>
-        <p>Rating: <%= review.rating %></p>
-      </li>
-      <br>
-      <br>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are no reviews for this product yet</p>
-<% end %>
+<div class="prod-list">
+    <ul>
+      <% @product.reviews.each do |review| %>
+        <li>
+          <p><%= review.body %></p>
+          <p> -- <%= review.author %></p>
+          <p>Rating: <%= review.rating %></p>
+        </li>
+        <br>
+        <br>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no reviews for this product yet</p>
+  <% end %>
+</div>
