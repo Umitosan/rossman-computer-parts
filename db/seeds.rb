@@ -14,7 +14,7 @@ Review.destroy_all
 50.times do |i|
   someProduct = Product.create!(name: Faker::Hacker.abbreviation,
                                 cost: Faker::Commerce.price,
-                                country: Faker::Hobbit.location
+                                country: Faker::Address.country
   )
   5.times do |j|
     someReview = someProduct.reviews.create!(author: Faker::RickAndMorty.character,
@@ -26,11 +26,3 @@ end
 
 p "Created #{Product.count} products"
 p "Created #{Review.count} reviews"
-
-
-# Database
-#   Products have Reviews
-#   Product
-#     name, cost, country of origin
-#   Review
-#      author, content_body, rating

@@ -48,6 +48,11 @@ color: #db7371
  padding: 35px;
 }
 
+.alert-notice {
+  text-align: center;
+  color: #db7371;
+}
+
 .home-list {
   border-radius: 1px;
   border-color: #db7371;

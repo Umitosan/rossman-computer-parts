@@ -10,6 +10,12 @@ class Product < ActiveRecord::Base
 
   scope :from_usa, -> { where(country: 'USA') }
 
-  # scope :alphabetical, -> { order(name: :asc) }
+  scope :most_reviewed, -> {(
+    select("products.id, products.*, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.id")
+    .order("reviews_count DESC")
+    .limit(10)
+    )}
 
 end

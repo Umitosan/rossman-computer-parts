@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   def index
     @newest_products = Product.newest
     @usa_products = Product.from_usa
+    @most_reviewed = Product.most_reviewed[0]
   end
 
   def showall
