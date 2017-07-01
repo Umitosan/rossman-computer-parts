@@ -1,3 +1,25 @@
-<h2>Home Page</h2>
+<h2>Products Home</h2>
 
 <br><br>
+
+<h3>Most reviewed!</h3>
+
+
+
+<h3>New!</h3>
+
+
+<ul>
+  <% @products.each do |product|  %>
+    <li>
+      <span id="prod-name"> <%= link_to product.name, product_path(product) %></span> |
+      <%= link_to "Edit", edit_product_path(product) %> |
+      <%= link_to "Delete", product_path(product),
+                               :data => {:confirm => "You sure?",
+                                         :method => "delete"} %>
+    </li>
+  <% end %>
+</ul>
+
+
+<h3>Products made in the USA!</h3>
