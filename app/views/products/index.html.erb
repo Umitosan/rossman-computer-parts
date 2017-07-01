@@ -3,33 +3,34 @@
 <br><br>
 
 <h3>Most reviewed!</h3>
-
-<ul>
-  <li class="home-list">
-    <span class="prod-name"> <%= link_to @most_reviewed.name, product_path(@most_reviewed) %></span> |
-    <%= link_to "Edit", edit_product_path(@most_reviewed) %> |
-    <%= link_to "Delete", product_path(@most_reviewed),
-                             :data => {:confirm => "You sure?",
-                                       :method => "delete"} %>
-  </li>
-</ul>
-
-<h3>New!</h3>
-
-<ul>
-  <% @newest_products.each do |product|  %>
+<% if @most_reviewed != nil %>
+  <ul>
     <li class="home-list">
-      <span class="prod-name"> <%= link_to product.name, product_path(product) %></span> |
-      <%= link_to "Edit", edit_product_path(product) %> |
-      <%= link_to "Delete", product_path(product),
+      <span class="prod-name"> <%= link_to @most_reviewed.name, product_path(@most_reviewed) %></span> |
+      <%= link_to "Edit", edit_product_path(@most_reviewed) %> |
+      <%= link_to "Delete", product_path(@most_reviewed),
                                :data => {:confirm => "You sure?",
                                          :method => "delete"} %>
     </li>
-  <% end %>
-</ul>
+  </ul>
+<% end %>
+
+<h3>New!</h3>
+<% if @newest_products != nil %>
+  <ul>
+    <% @newest_products.each do |product|  %>
+      <li class="home-list">
+        <span class="prod-name"> <%= link_to product.name, product_path(product) %></span> |
+        <%= link_to "Edit", edit_product_path(product) %> |
+        <%= link_to "Delete", product_path(product),
+                                 :data => {:confirm => "You sure?",
+                                           :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 
 <h3>Products made in the USA!</h3>
-
 <ul>
   <% @usa_products.each do |product|  %>
     <li class="home-list">
