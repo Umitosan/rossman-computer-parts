@@ -48,7 +48,13 @@ color: #db7371
  padding: 35px;
 }
 
-#prod-name {
+.home-list {
+  border-radius: 1px;
+  border-color: #db7371;
+  border-radius: 10px;
+}
+
+.prod-name {
  font-style: italic;
  font-size: 24px;
  color: #45a4cf;

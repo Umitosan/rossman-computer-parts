@@ -4,9 +4,7 @@ class Review < ActiveRecord::Base
 
   validates :author, :presence => true
   validates :body, :presence => true
-  validates_length_of( :body, within: 50..250,
-                      too_long: 'reveiw too long',
-                      too_short: 'review too short' )
+  validates_length_of( :body, in: 50..250)
   validates :rating, :presence => true
   validates_numericality_of(:rating, less_than: 6)
   validates_numericality_of(:rating, greater_than: 0)

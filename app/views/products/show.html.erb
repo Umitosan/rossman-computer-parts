@@ -1,6 +1,6 @@
 <h1> <%= @product.name %> - details </h1>
-
-<% if @product.reviews.any? %>
+<h3> Price: $<%= @product.cost %> </h3>
+<h3> Country: <%= @product.country %> </h3>
 
 <%= link_to "Add a review", new_product_review_path(@product) %>
 
@@ -8,6 +8,7 @@
 <br>
 
 <div class="prod-list">
+  <% if @product.reviews.any? %>
     <ul>
       <% @product.reviews.each do |review| %>
         <li>

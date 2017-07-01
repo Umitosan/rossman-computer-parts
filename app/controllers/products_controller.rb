@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @newest_products = Product.newest
+    @usa_products = Product.from_usa
   end
 
   def showall
