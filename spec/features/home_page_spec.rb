@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the home path' do
+describe 'the home page path' do
 
 
 end
