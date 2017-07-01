@@ -18,6 +18,4 @@ describe 'the add product path' do
     expect(page).to have_content('testName')
   end
 
-
-
 end
