@@ -6,4 +6,7 @@ describe Product do
   it { should validate_presence_of :country }
 
   it { should have_many :reviews }
+
+
+
 end

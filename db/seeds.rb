@@ -11,14 +11,14 @@ Product.destroy_all
 Review.destroy_all
 
 
-10.times do |i|
+50.times do |i|
   someProduct = Product.create!(name: Faker::Hacker.abbreviation,
                                 cost: Faker::Commerce.price,
                                 country: Faker::Hobbit.location
   )
   5.times do |j|
     someReview = someProduct.reviews.create!(author: Faker::RickAndMorty.character,
-                                             body: Faker::Hipster.paragraph(2),
+                                             body: Faker::Lorem.sentence(15),
                                              rating: (1 + rand(5))
   )
   end
